@@ -11,7 +11,6 @@
  */
 function updateText() {
   // CODE GOES HERE
-
   let text = document.getElementById("text-input").value;
   document.getElementById("text-output").innerText = text;
 }
@@ -65,4 +64,13 @@ function makeUnderline(elem) {
  */
 function alignText(elem, alignType) {
   // CODE GOES HERE
+
+  document.getElementById("text-output").style.textAlign = alignType;
+  let buttonList = document.getElementsByClassName("align");
+
+  for (let i = 0; i < buttonList.length; i++) {
+    buttonList[i].classList.remove("active");
+  }
+
+  elem.classList.add("active");
 }
